@@ -70,5 +70,5 @@ output "s3_bucket_tags" {
 
 output "region" {
   description = "Region of the bucket."
-  value       = var.region
+  value       = try(var.region,"not_set")
 }
