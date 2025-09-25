@@ -67,3 +67,8 @@ output "s3_bucket_tags" {
   description = "Tags of the bucket."
   value       = try(aws_s3_bucket.this[0].tags, {})
 }
+
+output "region" {
+  description = "Region of the bucket."
+  value       = var.region
+}
